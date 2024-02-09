@@ -130,12 +130,12 @@ async def main():
                         )
                     )
                     for player in current_vips.values():
-                        expiration_timestamps[player.player.steam_id_64] = (
-                            calc_vip_expiration_timestamp(
-                                config=config,
-                                expiration=player.expiration_date if player else None,
-                                from_time=seeded_timestamp,
-                            )
+                        expiration_timestamps[
+                            player.player.steam_id_64
+                        ] = calc_vip_expiration_timestamp(
+                            config=config,
+                            expiration=player.expiration_date if player else None,
+                            from_time=seeded_timestamp,
                         )
 
                     # Add or update VIP in CRCON
